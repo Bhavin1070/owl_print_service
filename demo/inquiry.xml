@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="print_service_inquiry0" model="crm.lead">
+        <field name="product_id" ref="print_service.print_service_product_template_mug001"></field>
+        <field name="product_name">Mug</field>
+        <field name="email_to">bsp@gmail.com</field>
+        <field name="user_id" ref="print_service.service_provider_res_users0"></field>
+        <field name="name">Print Photo on Mug</field>
+        <field name="description">Print Photo on Mug</field>
+        <field name="street">Dharampuri</field>
+        <field name="street2">Vansda</field>
+        <field name="city">Navsari</field>
+        <field name="zip">396590</field>
+        <field name="country_id" ref="base.in"></field>
+        <field name="company_id" ref="print_service.service_provider_company0"></field>
+        <field name="partner_id" ref="print_service.user_partner0"></field>
+        <field name="contact_name">Bhavin Patel</field>
+        <field name="partner_name">Jigar Sheth</field>
+        <field name="mobile">9876543210</field>
+    </record>
+
+    <record id="print_service_inquiry1" model="crm.lead">
+        <field name="product_id" ref="print_service.print_service_product_template_mug001"></field>
+        <field name="product_name">Mug</field>
+        <field name="email_to">bhaumik@gmail.com</field>
+        <field name="user_id" ref="print_service.service_provider_res_users0"></field>
+        <field name="name">Print Photo on Mug</field>
+        <field name="description">Print Photo on Mug</field>
+        <field name="street">P-98, pittalia street</field>
+        <field name="street2">Nrusihpark Society</field>
+        <field name="city">Ahemedabad</field>
+        <field name="zip">380014</field>
+        <field name="country_id" ref="base.in"></field>
+        <field name="company_id" ref="print_service.service_provider_company0"></field>
+        <field name="partner_id" ref="print_service.user_partner1"></field>
+        <field name="contact_name">Bhaumik Pittalia</field>
+        <field name="partner_name">Jigar Sheth</field>
+        <field name="mobile">9876543210</field>
+        <field name="state">accept</field>
+        <field name="planned_revenue">50.0</field>
+    </record>
+
+    <record id="print_service_inquiry2" model="crm.lead">
+        <field name="product_id" ref="print_service.print_service_product_template_mug001"></field>
+        <field name="product_name">Mug</field>
+        <field name="email_to">bhaumik@gmail.com</field>
+        <field name="user_id" ref="print_service.service_provider_res_users0"></field>
+        <field name="name">Print Photo on Mug</field>
+        <field name="description">Print Photo on Mug</field>
+        <field name="street">P-98, pittalia street</field>
+        <field name="street2">Nrusihpark Society</field>
+        <field name="city">Ahemedabad</field>
+        <field name="zip">380014</field>
+        <field name="country_id" ref="base.in"></field>
+        <field name="company_id" ref="print_service.service_provider_company0"></field>
+        <field name="partner_id" ref="print_service.user_partner1"></field>
+        <field name="contact_name">Bhaumik Pittalia</field>
+        <field name="partner_name">Jigar Sheth</field>
+        <field name="mobile">9876543210</field>
+        <field name="state">accept</field>
+        <field name="planned_revenue">50.0</field>
+        <field name="active" eval="False"></field>
+    </record>
+
+</odoo>

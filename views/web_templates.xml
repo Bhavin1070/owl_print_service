@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="web_print_service_user_list">
+		<field name="name">User List</field>
+		<field name="model">res.users</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="partner_id"/>
+				<field name="login"/>
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="web_print_service_user_form">
+		<field name="name">User Form</field>
+		<field name="model">res.users</field>
+		<field name="arch" type="xml">
+			<form name="User Form">
+				<sheet>
+					<group>
+						<field name="partner_id"/>
+						<field name="login"/>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="web_print_service_user_action">
+		<field name="name">User</field>
+		<field name="res_model">res.users</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<record model="ir.ui.view" id="web_print_service_order_list">
+		<field name="name">Order List</field>
+		<field name="model">sale.order</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="name"/>
+				<field name="date_order"/>
+				<field name="user_id"/>
+				<field name="company_id"/>
+				<field name="amount_total"/>
+				<field name="state"/>
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="web_print_service_order_form">
+		<field name="name">Order Form</field>
+		<field name="model">sale.order</field>
+		<field name="arch" type="xml">
+			<form name="Order Form">
+				<sheet>
+					<group>
+						<field name="name"/>
+						<field name="date_order"/>
+						<field name="user_id"/>
+						<field name="company_id"/>
+						<field name="amount_total"/>
+						<field name="state"/>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="web_print_service_order_action">
+		<field name="name">Order</field>
+		<field name="res_model">sale.order</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<record model="ir.ui.view" id="web_print_service_feedback_list">
+		<field name="name">Feedback List</field>
+		<field name="model">rating.rating</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="rated_partner_id"/>
+				<field name="partner_id"/>
+				<field name="feedback"/>
+				<field name="rating_text"/>
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="web_print_service_feedback_form">
+		<field name="name">Feedback Form</field>
+		<field name="model">rating.rating</field>
+		<field name="arch" type="xml">
+			<form name="Feedback Form">
+				<sheet>
+					<group>
+						<field name="rated_partner_id"/>
+						<field name="partner_id"/>
+						<field name="feedback"/>
+						<field name="rating_text"/>
+						<field name="res_id"/>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="web_print_service_feedback_action">
+		<field name="name">Feedback</field>
+		<field name="res_model">rating.rating</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem name="Print Service" id="print_service_rootmenu"/>
+		<menuitem name="Users and Service Providers" id="print_service_user_menu" parent="print_service_rootmenu" action="web_print_service_user_action" sequence="1"/>
+		<menuitem name="Orders" id="print_service_order_menu" parent="print_service_rootmenu" action="web_print_service_order_action" sequence="3"/>
+		<menuitem name="Feedback" id="print_service_feedback_menu" parent="print_service_rootmenu" action="web_print_service_feedback_action" sequence="4"/>
+
+</odoo>

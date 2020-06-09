@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="assets_frontend" name="assets" inherit_id="web.assets_frontend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/print_service/static/src/js/portal_user_page.js"></script>
+            <script type="text/javascript" src="/print_service/static/src/js/portal_user_print_services_card_views.js"></script>
+            <script type="text/javascript" src="/print_service/static/src/js/portal_user_inquiry_views.js"></script>
+            <script type="text/javascript" src="/print_service/static/src/js/menu_bar.js"></script>
+            <script type="text/javascript" src="/print_service/static/src/js/orders_detail.js"></script>
+            <script type="text/javascript" src="/print_service/static/src/js/order_page.js"></script>
+            <script type="text/javascript" src="/print_service/static/src/js/feedback.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+            <script type="text/javascript" src="/print_service/static/src/js/img.js"></script>
+            <link href="/print_service/static/src/scss/print_service.scss" rel="stylesheet" type="text/scss"/>
+        </xpath>
+    </template>
+
+    <template id="main_template">
+        <t t-call="portal.portal_layout">
+            <div class="menu_item">
+            </div>
+            <div class="component_view">
+            </div>
+        </t>
+    </template>
+
+</odoo>

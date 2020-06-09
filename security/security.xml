@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record model="ir.module.category" id="module_security">
+  	    <field name="name">Print Service Access Security</field>
+  		<field name="description">User access level for this module</field>
+  		<field name="sequence">3</field>
+	</record>
+
+    <record id="print_service_group_admin" model="res.groups">
+        <field name="name">Print Service Admin</field>
+        <field name="implied_ids" eval="[(4, ref('base.user_admin'))]"/>
+        <field name="category_id" ref="print_service.module_security"/>
+    </record>
+
+    <record id="print_service_group_service_providers" model="res.groups">
+        <field name="name">Print Service Provider</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_portal'))]"/>
+        <field name="category_id" ref="print_service.module_security"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+				<!-- User Data -->
+
+        <record id="user_partner0" model="res.partner">
+            <field name="name">Bhavin Patel</field>
+            <field name="street">Dharampuri</field>
+            <field name="street2">Dharampuri</field>
+            <field name="city">Vansda</field>
+            <field name="zip">396590</field>
+            <field name="country_id" ref="base.in"></field>
+            <field name="mobile">7575051070</field>
+            <field name="email">bsp@gmail.com</field>
+        </record>
+
+        <record id="user_res_users0" model="res.users">
+            <field name="partner_id" ref="print_service.user_partner0"></field>
+            <field name="login">bsp@gmail.com</field>
+            <field name="password">123</field>
+            <field name="groups_id" eval="[(6,0,[ref('base.group_portal')])]"></field>
+        </record>
+
+        <record id="user_partner1" model="res.partner">
+            <field name="name">Bhaumik Pittalia</field>
+            <field name="street">P-98, pittalia street</field>
+            <field name="street2">Nrusihpark Society</field>
+            <field name="city">Ahmedabad</field>
+            <field name="zip">380014</field>
+            <field name="country_id" ref="base.in"></field>
+            <field name="mobile">9988776655</field>
+            <field name="email">bhaumik@gmail.com</field>
+        </record>
+
+        <record id="user_res_users1" model="res.users">
+            <field name="partner_id" ref="print_service.user_partner1"></field>
+            <field name="login">bhaumik@gmail.com</field>
+            <field name="password">123</field>
+            <field name="groups_id" eval="[(6,0,[ref('base.group_portal')])]"></field>
+        </record>
+
+				<!-- Service Provider Data -->
+
+        <record id="service_provider_partner0" model="res.partner">
+            <field name="name">Jigar Sheth</field>
+            <field name="street">5, superplaza complex</field>
+            <field name="street2">Vastrapur</field>
+            <field name="city">Ahmedabad</field>
+            <field name="zip">380014</field>
+            <field name="country_id" ref="base.in"></field>
+            <field name="mobile">9876543210</field>
+            <field name="email">ccprint@gmail.com</field>
+            <field name="commercial_company_name">Copy Cat Print Shop</field>
+        </record>
+
+        <record id="service_provider_company0" model="res.company">
+            <field name="name">Copy Cat Print Shop</field>
+            <field name="partner_id" ref="print_service.service_provider_partner0"></field>
+        </record>
+
+        <record id="service_provider_res_users0" model="res.users">
+            <field name="partner_id" ref="print_service.service_provider_partner0"></field>
+            <field name="login">ccprint@gmail.com</field>
+            <field name="password">123</field>
+            <field name="company_id" ref="print_service.service_provider_company0"></field>
+            <field name="company_ids" eval="[(4,ref('print_service.service_provider_company0'))]"></field>
+            <field name="groups_id" eval="[(6,0,[ref('print_service.print_service_group_service_providers')])]"></field>
+        </record>
+
+        <record id="service_provider_partner1" model="res.partner">
+            <field name="name">Abhijit Gamit</field>
+            <field name="street">10, Bhavani complex</field>
+            <field name="street2">Kalupur</field>
+            <field name="city">Ahmedabad</field>
+            <field name="zip">380014</field>
+            <field name="country_id" ref="base.in"></field>
+            <field name="mobile">9865457856</field>
+            <field name="email">abhi@gmail.com</field>
+            <field name="commercial_company_name">Abhi Print</field>
+        </record>
+
+        <record id="service_provider_company1" model="res.company">
+            <field name="name">Abhi Print</field>
+            <field name="partner_id" ref="print_service.service_provider_partner1"></field>
+        </record>
+
+        <record id="service_provider_res_users1" model="res.users">
+            <field name="partner_id" ref="print_service.service_provider_partner1"></field>
+            <field name="login">abhi@gmail.com</field>
+            <field name="password">123</field>
+            <field name="company_id" ref="print_service.service_provider_company1"></field>
+            <field name="company_ids" eval="[(4,ref('print_service.service_provider_company1'))]"></field>
+            <field name="groups_id" eval="[(6,0,[ref('print_service.print_service_group_service_providers')])]"></field>
+        </record>
+
+	</data>
+</odoo>

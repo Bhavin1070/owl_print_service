@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="print_service_product_template_mug001" model="product.product">
+        <field name="name">Mug</field>
+        <field name="standard_price">5.0</field>
+        <field name="list_price">10.0</field>
+        <field name="type">consu</field>
+        <field name="uom_id" ref="uom.product_uom_unit"/>
+        <field name="uom_po_id" ref="uom.product_uom_unit"/>
+        <field name="description_sale">Mug.</field>
+        <field name="image_1920" file="print_service/static/src/img/mug001.jpeg" type="base64" />
+        <field name="create_uid" ref="print_service.service_provider_res_users0"/>
+    </record>
+
+    <record id="print_service_product_template_shirt001" model="product.product">
+        <field name="name">Tshirt</field>
+        <field name="standard_price">7.0</field>
+        <field name="list_price">15.0</field>
+        <field name="type">consu</field>
+        <field name="uom_id" ref="uom.product_uom_unit"/>
+        <field name="uom_po_id" ref="uom.product_uom_unit"/>
+        <field name="description_sale">Tshirt.</field>
+        <field name="image_1920" type="base64" file="print_service/static/src/img/t-shirt001.jpg"/>
+        <field name="create_uid" ref="print_service.service_provider_res_users0"/>
+    </record>
+
+</odoo>
