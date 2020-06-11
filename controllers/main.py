@@ -21,22 +21,6 @@ class Home(Home):
 
 class PrintServiceUser(http.Controller):
 
-    @http.route('/test', auth='user', type="http", methods=['POST'], csrf=False)
-    def test(self, **post):
-        print('\n\n', post)
-        print('\n\n', post.get('attachment'))
-        print('\n\n', type(post.get('attachment')))
-        # request.env['product.product'].sudo().create({
-        #     'default_code': 'TEST001',
-        #     'name': 'Test',
-        #     'type': 'consu',
-        #     'weight': 0.1,
-        #     'list_price': 10,
-        #     'description': 'Test',
-        #     'image_1920': base64.b64encode(img.read())
-        # })
-        return
-
     @http.route('/print/service/getUserType', auth='user', type="json")
     def _getUserType(self):
         return self.getUserType()
@@ -231,7 +215,6 @@ class PrintServiceUser(http.Controller):
 
     @http.route('/print/service/add/service', auth='user', type="http", methods=['POST'], csrf=False)
     def addService(self, **kw):
-        msg = None
         if kw:
             request.env['product.product'].sudo().create({
                 'name': kw.get('name'),
@@ -243,7 +226,6 @@ class PrintServiceUser(http.Controller):
                 'uom_id': 1,
                 'uom_po_id': 1
             })
-            msg = True
         return http.local_redirect("/home")
 
     @http.route('/get_order_details', type='json', auth="user")
